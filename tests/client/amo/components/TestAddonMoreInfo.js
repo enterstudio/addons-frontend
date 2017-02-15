@@ -42,7 +42,7 @@ describe('<AddonMoreInfo />', () => {
   });
 
   it('adds a protocol to a homepage URL if missing', () => {
-    const root = render({ addon: { ...fakeAddon, homepage: 'test.com' }});
+    const root = render({ addon: { ...fakeAddon, homepage: 'test.com' } });
 
     assert.equal(root.homepageLink.textContent, 'test.com');
     assert.equal(root.homepageLink.tagName, 'A');
@@ -51,7 +51,7 @@ describe('<AddonMoreInfo />', () => {
 
   it('works with HTTPS URLs', () => {
     const root = render(
-      { addon: { ...fakeAddon, homepage: 'https://test.com' }});
+      { addon: { ...fakeAddon, homepage: 'https://test.com' } });
 
     assert.equal(root.homepageLink.textContent, 'test.com');
     assert.equal(root.homepageLink.tagName, 'A');
